@@ -1,0 +1,58 @@
+{% extends '_base.html' %}
+{% include 'header.html' %}
+{% block CSS %}
+<style type="text/css">
+:root {
+  --color-1: hsl(223, 90%,40%);
+  --color-1-hover: #4338ca;
+  --color-2: hsl(223, 90%,10%);
+  --color-2-hover: #0891b2;
+  --text-color: #312e81;
+  --status-btn-bg: #f8fafc;
+  --status-btn-bg-hover: #f1f5f9;
+}
+
+body {
+  background: linear-gradient(to left, var(--color-1), var(--color-2));
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <table class="results-container" border="1">
+  <tbody>
+    <tr>
+      <td>Diarrhea (watery stool)</td>
+      <td>9518</td>
+    </tr>
+    <tr>
+      <td>Nausea or Vomiting</td>
+      <td>7326</td>
+    </tr>
+    <tr>
+      <td>Dehydrated(lost much water)</td>
+      <td>4162</td>
+    </tr>
+    <tr>
+      <td>LinkedIn</td>
+      <td>3654</td>
+    </tr>
+    <tr>
+      <td>CodePen</td>
+      <td>2002</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>4623</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{% endblock %}
+{% block JS %}
+<script type="text/javascript">
+
+
+</script>
+{% endblock %}

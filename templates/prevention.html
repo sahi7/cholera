@@ -1,0 +1,172 @@
+{% extends '_base.html' %}
+{% include 'header.html' %}
+{% block CSS %}
+<style type="text/css">
+:root {
+  --color-1: hsl(223, 90%,40%);
+  --color-1-hover: #4338ca;
+  --color-2: hsl(223, 90%,10%);
+  --color-2-hover: #0891b2;
+  --text-color: #312e81;
+  --status-btn-bg: #f8fafc;
+  --status-btn-bg-hover: #f1f5f9;
+}
+
+body {
+  background: linear-gradient(to left, var(--color-1), var(--color-2));
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="btn-home">
+    <a href="/treatment" ><button class="custom-btn btn-9">Back</button></a>
+    <a href="/diagnosis" ><button class="custom-btn btn-9">Diagnosis</button></a>
+  </div>
+<div class="container" style="max-width: 60em;">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card mb-3">
+        <h2>Cholera Fact Sheet</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card border-0 rounded-0 mb-3">
+        <div class="card-body">
+          <p>
+            To prevent cholera, you should wash your hands often and take steps to ensure your food and water are safe for use. Following these simple steps greatly reduces your risk of getting cholera in areas where cholera is
+            spreading:
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row-fluid">
+        <div class="vc_empty_space col-12 pt-1 pb-2"><span class="vc_empty_space_inner"></span></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card border-0 rounded-0 mb-3">
+            <div class="card-header h4 bg-primary rounded-0">1. Be sure you drink and use safe water.</div>
+            <div class="card-body">
+              <ul class="false">
+                <li>Use bottled water to brush your teeth, wash and prepare food, and make ice or beverages.</li>
+                <li>If bottled water is not available, use water that has been properly boiled, chlorinated, or filtered using a filter that can remove bacteria.</li>
+                <li>Use bottled water with unbroken seals.</li>
+              </ul>
+              <p><strong>Water from pipes, drinks sold in cups or bags, and ice may not be safe. </strong></p>
+            </div>
+          </div>
+          <div class="card border-0 rounded-0 mb-3">
+            <div class="card-body bg-tertiary">
+              <p><strong>If you think your water may not be safe—treat it with a chlorine product, boil it, treat with bleach, or filter it.</strong></p>
+              <p>Treat with Chlorine Product</p>
+              <ul class="false">
+                <li>Treat your water with one of the locally available chlorine treatment products and follow the label instructions.</li>
+              </ul>
+              <p>Or Boil it</p>
+              <ul class="false">
+                <li>
+                  If a chlorine treatment product is not available, boiling is an effective way to make water safe. Bring your water to a rolling boil for 1 minute. <strong>Note:</strong> Boiled water is at risk for
+                  re-contamination if not stored and used safely.
+                </li>
+              </ul>
+              <p>Or Treat with Bleach</p>
+              <ul class="false">
+                <li>
+                  If you cannot boil water, treat water with household bleach. Add 8 drops of household bleach for every 1 gallon of water (or 2 drops of household bleach for every 1 liter of water) and wait 30 minutes before
+                  drinking.
+                </li>
+              </ul>
+              <p>Or Filter It</p>
+              <ul class="false">
+                <li>If filtering, use a device with a pore size less than or equal to 0.3 microns and treat the water with a disinfectant such as chlorine, chlorine dioxide, or iodine.</li>
+                <li>Always store your treated water in a clean, covered container.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card border-0 rounded-0 mb-3">
+            <div class="card-header h4 bg-primary rounded-0">2. Wash your hands often with soap and safe water.</div>
+            <div class="card-body">
+              <ul class="false">
+                <li>Before, during, and after preparing food.</li>
+                <li>Before and after eating food or feeding your children.</li>
+                <li>After using the toilet.</li>
+                <li>After cleaning your child’s bottom.</li>
+                <li>After taking care of someone who is sick with diarrhea.</li>
+              </ul>
+              <p>
+                <strong><em>If you don’t have access to soap and water, use an alcohol-based hand rub with at least 60% alcohol.</em></strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card border-0 rounded-0 mb-3">
+            <div class="card-header h4 bg-primary rounded-0">3. Use toilets</div>
+            <div class="card-body">
+              <ul class="false">
+                <li>Use toilets or safely managed sanitation facilities&nbsp;to get rid of feces (poop). This includes disposal of children’s poop.</li>
+                <li>Wash hands with soap and safe water after going to the bathroom.</li>
+              </ul>
+              <p><strong>If you don’t have access to a toilet:</strong></p>
+              <ul class="false">
+                <li>Poop at least 30 meters (98 feet) away from any body of water (including wells) and then bury your poop.</li>
+                <li>Dispose of plastic bags containing poop in latrines or at collection points if available, or bury it in the ground.</li>
+                <li>Do not put plastic bags in chemical toilets.</li>
+                <li>Dig new latrines or temporary pit toilets at least a half-meter (1.6 feet) deep and at least 30 meters (100 feet) away from any body of water.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card border-0 rounded-0 mb-3">
+            <div class="card-header h4 bg-primary rounded-0">4. Boil it, cook it, peel it, or leave it.</div>
+            <div class="card-body">
+              <ul class="false">
+                <li>Cook food well, keep it covered, eat it hot, and peel fruits and vegetables.</li>
+                <li>Eat foods that have been thoroughly cooked and are still hot and steaming. Be sure to cook seafood, especially shellfish, until it is very hot all the way through.</li>
+                <li>Avoid raw vegetables and fruits that cannot be peeled.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card border-0 rounded-0 mb-3">
+            <div class="card-header h4 bg-primary rounded-0">5. Clean up safely.</div>
+            <div class="card-body">
+              <ul class="false">
+                <li>Clean food preparation areas and kitchenware with soap and treated water and let dry completely before reuse.</li>
+                <li>Bathe and wash clothes or diapers 30 meters (100 feet) away from drinking water sources.</li>
+                <li>Clean and disinfect toilets and surfaces contaminated with poop: clean the surface with a soap solution to remove solids; then disinfect using a solution of 1 part household bleach to 9 parts water.</li>
+                <li>When finished cleaning, safely dispose of soapy water and dirty rags. Wash hands again with soap and safe water after cleaning and disinfecting.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>       
+</div>
+
+{% endblock %}
+{% block JS %}
+<script type="text/javascript">
+
+
+</script>
+{% endblock %}

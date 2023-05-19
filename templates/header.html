@@ -1,0 +1,29 @@
+{% block header %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="banner">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='img/ub-logo.png') }}" alt="Logo" style="width: 100px;">
+        </div>
+        <div class="messages">
+          <!-- Message 2 -->
+          <div id="topic-1" class="message-topic">{{ title }}</div>
+          <div id="message-1" class="message-content">
+            <span>{{ desc }}</span>
+          </div>
+          
+          <!-- Message 2 -->
+          <!--<div id="topic-2" class="message-topic">Vision</div>
+          <div id="message-2" class="message-content">
+            <span>To be a collaborative research community that improves health by accelerating discovery, innovation, and broad application</span>
+          </div>-->
+          
+        </div>
+      <hr>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+{% endblock %}

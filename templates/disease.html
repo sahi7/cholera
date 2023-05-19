@@ -1,0 +1,90 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light">Predict the probability of Cholera disease
+                    <br>
+                </h5>
+            </div>
+
+            <div class="row">
+                <form action='/predict' method="post" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s4">
+
+                            <div class="input-field col s4">
+
+                                <label for="col2"><b>Age </b></label>
+                                <br>
+                                <input id="col2" name="Age" placeholder="Age in years" type="text" class="validate">
+                                <br> <br>
+                            </div>
+                            <label for="col1"><b>Gender</b></label>
+                            <br>
+                            <input placeholder="Gender-Enter 0 for female and  1 for male" name="Gender" id="col1" type="text" class="validate">
+                            <br> <br>
+                        </div>
+
+                        <div class="input-field col s4">
+
+                            <label for="col2"><b>Clinical symptoms</b></label>
+                            <br>
+                            <input id="col2" name="Clinical symptoms" placeholder="Enter 0 in case of any Clinical symptoms like Profuse watery diarrhoea (Rice water stools), Severe thirst and severe vomiting" type="text" class="validate">
+                            <br> <br>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="col3"><b>Number of cigarettes</b></label>
+                            <br>
+                            <input id="col3" name="Dehydration Signs" placeholder="Dehydration Signs like loss of skin elasticity, sunken eyes,dry and  bluish mucous membranes" type="text" class="validate">
+                            <br> <br>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="col12"><b>Temperature</b></label>
+                            <br>
+                            <input id="col12" name="Temperature" placeholder="Enter your Temperature" type="text" class="validate">
+                            <br> <br>
+                        </div>
+
+
+
+                        <div class="input-field col s4">
+                            <label for="col9"><b>Systolic blood pressure</b></label>
+                            <br>
+                            <input id="col9" name="Systolic blood pressure" placeholder="Enter your systolic blood pressure" type="text" class="validate">
+                            <br> <br>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="col10"><b>Diastolic blood pressure</b></label>
+                            <br>
+                            <input id="col10" name="Diastolic blood pressure" placeholder="Enter your diastolic blood pressure" type="text" class="validate">
+                            <br> <br>
+                        </div>
+
+
+                        <div class="input-field col s4">
+                            <label for="col11"><b>Heart rate</b></label>
+                            <br>
+                            <input id="col11" name="Heart rate" placeholder="Enter your heart rate" type="text" class="validate">
+                            <br> <br>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row center">
+                        <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            <br>
+            <div> {{ pred }} </div>
+        </div>
+    </div>
+{% endblock %}

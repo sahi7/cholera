@@ -1,0 +1,77 @@
+{% extends '_base.html' %}
+{% include 'header.html' %}
+{% block CSS %}
+<style type="text/css">
+:root {
+  --color-1: hsl(223, 90%,40%);
+  --color-1-hover: #4338ca;
+  --color-2: hsl(223, 90%,10%);
+  --color-2-hover: #0891b2;
+  --text-color: #312e81;
+  --status-btn-bg: #f8fafc;
+  --status-btn-bg-hover: #f1f5f9;
+}
+
+body {
+  background: linear-gradient(to left, var(--color-1), var(--color-2));
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="btn-home">
+    <a href="/diagnosis" ><button class="custom-btn btn-9">Back</button></a>
+    <a href="/prevention" ><button class="custom-btn btn-9">Prevention</button></a>
+  </div>
+<div class="container" style="max-width: 60em;">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card mb-3">
+        <h2>Cholera Treatment</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card bg-transparent border-0 rounded-0 mb-3">
+      <div class="card-body p-0 bg-transparent">
+        <p>
+          Most persons infected with the cholera bacterium have mild diarrhea or no symptoms at all. Only a small proportion, about 10%, of persons infected with <em>Vibrio cholerae</em> O1 may have illness requiring treatment
+          at a health center. Cholera patients should be evaluated and treated quickly. With proper treatment, even severely ill patients can be saved.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row match-height">
+  <div class="col-md-4">
+    <a href="#" class="bl-5 bl-primary ds-8 mb-3" style="height: 163.1px;">
+      <div class="card-body bg-gray-l2">
+        <p><span class="text-blue font-weight-bold text-underline">Rehydration therapy</span>, the primary treatment for cholera patients, refers to the prompt restoration of lost fluids and salts.</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-4">
+    <a href="#" class="bl-5 bl-primary ds-8 mb-3" style="height: 163.1px;">
+      <div class="card-body bg-gray-l2">
+        <p><span class="text-blue font-weight-bold text-underline">Antibiotic treatment</span> reduces fluid requirements and duration of illness, and is indicated for severe cases of cholera.</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-4">
+    <a href="#" class="bl-5 bl-primary ds-8 mb-3" style="height: 163.1px;">
+      <div class="card-body bg-gray-l2">
+        <p><span class="text-blue font-weight-bold text-underline">Zinc treatment</span> has also been shown to help improve cholera symptoms in children.</p>
+      </div>
+    </a>
+  </div>
+</div>   
+</div>
+
+{% endblock %}
+{% block JS %}
+<script type="text/javascript">
+
+
+</script>
+{% endblock %}
