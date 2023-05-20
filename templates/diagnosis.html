@@ -26,37 +26,34 @@ body {
     <span class="tab">3</span>
     <span class="tab">4</span>
   </div>
-  <form action="#">
-    <div role="tab-list">
+  <form action="/diagnosis" method="POST" enctype="application/json">
+    <div id="diagnosisF" role="tab-list">
       <div role="tabpanel" class="tabpanel">
         <h3>Do you have Diarrhea(stool watery stool)</h3>
-        <textarea id="ques1" class="form-input" placeholder="Yes or No"></textarea>
+        <textarea name="ques1" id="ques1" class="form-input" placeholder="Yes or No"></textarea>
       </div>
       <div role="tabpanel" id="tabpanel2" class="tabpanel hidden">
         <h3>Do you experience Nausea or Vomiting?</h3>
-        <textarea id="ques2" class="form-input" placeholder="Yes or No"></textarea>
+        <textarea name="ques2" id="ques2" class="form-input" placeholder="Yes or No"></textarea>
       </div>
 
       <div role="tabpanel" class="tabpanel hidden">
         <h3>Do you feel Dehydrated(your system has lost much water)?</h3>
-        <textarea id="ques3" class="form-input" placeholder="Yes or No"></textarea>
+        <textarea name="ques3" id="ques3" class="form-input" placeholder="Yes or No"></textarea>
       </div>
       <div role="tabpanel" class="tabpanel hidden">
         <h3>Is Cholera outbreak declared in your area?</h3>
-        <textarea id="ques4" class="form-input" placeholder="Yes or No"></textarea>
+        <textarea name="ques4" id="ques4" class="form-input" placeholder="Yes or No"></textarea>
       </div>
     </div>
       <div class="pagination">
         <a class="btn hidden" id="prev">Previous</a>
         <a class="btn" id="next">Continue</a>
-        <button class="btn btn-submit hidden" id="submit">Submit</button>
+        <button type="submit" class="btn btn-submit hidden" id="submit" onclick="submitData()">Submit</button>
       </div>
     </form>
 </div>
 {% endblock %}
 {% block JS %}
-<script type="text/javascript">
-
-
-</script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}

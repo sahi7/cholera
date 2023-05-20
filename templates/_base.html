@@ -5,7 +5,6 @@
     <title>{% block title %}Expert System for Diagnosis and Treatement of Cholera<{% endblock %}</title>
     <!-- Additional common CSS or JS files -->
     
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
     {% block CSS %}{% endblock %}
 </head>
 <body>
@@ -20,7 +19,7 @@
 
     <footer>
     <!-- Additional common JS files -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
     {% block JS %}{% endblock %}
     </footer>
 </body>

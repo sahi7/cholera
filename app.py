@@ -1,6 +1,6 @@
 import joblib
 import numpy as np
-from flask import Flask,request, url_for, redirect, render_template
+from flask import Flask,request, url_for, redirect, render_template, jsonify
 
 app = Flask(__name__)
 app.static_folder = 'static'
@@ -19,10 +19,49 @@ def welcome():
 
 
 @app.route('/diagnosis', methods=['POST','GET'])
-def questions():
+def diagnosis():
     title = 'Diagnosis'
     desc = 'Identification of Vibrio cholerae'
+    if request.method == 'POST':
+        if request.is_json:
+            response_data = request.get_json()
+        else:
+            response_data = request.form.to_dict()
+            
+
+        # Perform necessary processing with the data
+        ques1 = request.form.get('ques1')
+        ques2 = request.form.get('ques2')
+        ques3 = request.form.get('ques3')
+        ques4 = request.form.get('ques4')
+        quantity1 = int(request.form.get('quantity1'))
+        quantity2 = int(request.form.get('quantity2'))
+
+        if ques1 == "yes" and ques2 == "yes" and quantity1 > 3 and quantity2 > 3:
+            result = 'Positive'
+        elif quantity1 < 3 and quantity2 < 3:
+            result = 'Negative'
+        elif ques1 == "yes" and ques4 == "yes":
+            result = 'Positive'
+        elif ques2 == "yes" and ques3 == "yes":
+            result = 'Positive'
+        else:
+            result = 'Negative'
+        
+        desc = 'Patient screening complete'
+        response_data['title'] = title
+        response_data['desc'] = desc
+        response_data['result'] = result
+        print('respose', response_data)
+        # Render the results template or return JSON response
+        if request.is_json:
+            return jsonify(response_data)
+        else:
+            return render_template("results.html", data=response_data)
+
+    # Render the diagnosis template for GET requests
     return render_template("diagnosis.html", title=title, desc=desc)
+    
 
 
 @app.route('/prevention')
@@ -41,11 +80,12 @@ def treatment():
 
 
 
-@app.route('/results')
+@app.route('/results',methods=['POST','GET'])
 def results():
     title = 'Diagnosis'
     desc = 'Patient screening complete'
-    return render_template("results.html", title=title, desc=desc)
+
+    return render_template("home.html", data=response_data)
 
 
 

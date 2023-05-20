@@ -19,32 +19,35 @@ body {
 {% endblock %}
 
 {% block content %}
+<div class="btn-home">
+    <a href="/diagnosis" ><button class="custom-btn btn-9">Test Again</button></a>
+    <a href="/treatment" ><button class="custom-btn btn-9">Treatment</button></a>
+  </div>
 <div class="container">
+  <div class="test-results">
+    {% if data.result == "Negative" %}
+    <h2 style="background-color: green;">Negative.</h2>
+    {% else%}
+    <h2 style="background-color: red;">Positive.</h2>
+    {% endif %}
+  </div>
   <table class="results-container" border="1">
   <tbody>
     <tr>
       <td>Diarrhea (watery stool)</td>
-      <td>9518</td>
+      <td>{{ data.ques1 }} ({{ data.quantity1 }}) times</td>
     </tr>
     <tr>
       <td>Nausea or Vomiting</td>
-      <td>7326</td>
+      <td>{{ data.ques2 }} ({{ data.quantity2 }}) times</td>
     </tr>
     <tr>
-      <td>Dehydrated(lost much water)</td>
-      <td>4162</td>
+      <td>Dehydrated (lost much water)</td>
+      <td>{{ data.ques3 }}</td>
     </tr>
     <tr>
-      <td>LinkedIn</td>
-      <td>3654</td>
-    </tr>
-    <tr>
-      <td>CodePen</td>
-      <td>2002</td>
-    </tr>
-    <tr>
-      <td>GitHub</td>
-      <td>4623</td>
+      <td>Cholera outbreak area?</td>
+      <td>{{ data.ques4 }}</td>
     </tr>
   </tbody>
 </table>

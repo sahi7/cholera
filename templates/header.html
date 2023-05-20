@@ -1,3 +1,7 @@
+{% block CSS %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
 {% block header %}
 <div class="container-fluid">
   <div class="row">
@@ -8,11 +12,17 @@
         </div>
         <div class="messages">
           <!-- Message 2 -->
+          {% if title %}
           <div id="topic-1" class="message-topic">{{ title }}</div>
           <div id="message-1" class="message-content">
             <span>{{ desc }}</span>
           </div>
-          
+          {% else %}
+          <div id="topic-1" class="message-topic">{{ data.title }}</div>
+          <div id="message-1" class="message-content">
+            <span>{{ data.desc }}</span>
+          </div>
+          {% endif %}
           <!-- Message 2 -->
           <!--<div id="topic-2" class="message-topic">Vision</div>
           <div id="message-2" class="message-content">

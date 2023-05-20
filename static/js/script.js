@@ -4,10 +4,6 @@ const submitButton = document.querySelector('#submit')
 const tabTargets = document.querySelectorAll('.tab')
 const tabPanels = document.querySelectorAll('.tabpanel')
 
-var ques1 = document.getElementById("ques1").value
-var ques2 = document.getElementById("ques2").value
-var ques3 = document.getElementById("ques3").value
-var ques4 = document.getElementById("ques4").value
 var quantity1 = 0;
 var quantity2 = 0;
 
@@ -137,5 +133,25 @@ function submitQuantity2() {
     }
   }
 }
-console.log("Submitted quantity:", quantity1);
-console.log("Submitted quantity:", quantity2);
+
+
+function submitData() {
+  var inputQues1 = document.createElement('input');
+  inputQues1.type = 'hidden';
+  inputQues1.name = 'quantity1';
+  inputQues1.value = quantity1;
+
+  var inputQues2 = document.createElement('input');
+  inputQues2.type = 'hidden';
+  inputQues2.name = 'quantity2';
+  inputQues2.value = quantity2;
+
+  var form = document.getElementById('diagnosisF');
+  form.appendChild(inputQues1);
+  form.appendChild(inputQues2);
+
+}
+
+function goBack() {
+  window.history.back();
+}
